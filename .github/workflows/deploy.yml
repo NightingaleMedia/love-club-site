@@ -1,0 +1,43 @@
+# https://t.hegu.it/deploy-on-ftp-with-github-actions/
+name: Production Action
+on:
+    push:
+        branches:
+            - production
+            - development
+jobs:
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+              with:
+                  ref: ${{ github.ref }}
+            - name: Upload ftp
+              uses: sebastianpopp/ftp-action@releases/v2
+              with:
+                  host: ${{ secrets.FTP_SERVER }}
+                  user: github-actions
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  localDir: "dist"
+                  remoteDir: "love-club"
+                  options: "--delete"
+    # directory-update:
+    #   name: switch out file
+    #   needs: deploy
+    #   runs-on: ubuntu-latest
+    #   steps:
+    #     - name: Move Files
+    #       uses: garygrossgarten/github-action-ssh@release
+    #       with:
+    #         command: |
+    #           d=$(date +%Y-%m-%d_%H%M) && \
+    #           mkdir glassroom_archive/gr-archive_github_$d && \
+    #           mv public_html/glassroomart/* glassroom_archive/gr-archive_github_$d && \
+    #           mv public_html/glassroom-test/* public_html/glassroomart
+    #         host: ${{ secrets.SSH_HOST }}
+    #         username: xeghpcmy
+    #         passphrase: ${{ secrets.SSH_PASSPHRASE }}
+    #         privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
+    #       env:
+    #         CI: true
