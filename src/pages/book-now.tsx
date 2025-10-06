@@ -4,7 +4,17 @@ import { BookingForm } from '../components/bookingForm/bookingForm'
 const BookNowPage = () => {
   return (
     <main>
-      <Box sx={{ p: 3 }}>
+      <Box
+        sx={(theme) => ({
+          px: 1,
+          pb: 10,
+          [theme.breakpoints.up('sm')]: {
+            px: 3,
+            maxWidth: '768px',
+            margin: 'auto',
+          },
+        })}
+      >
         <BookingForm />
       </Box>
     </main>

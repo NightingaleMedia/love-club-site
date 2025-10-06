@@ -32,6 +32,7 @@ const StyledWrap = styled(Box)`
   width: 100%;
   max-width: 400px;
   border-radius: 8px;
+  margin-bottom: 10px;
   overflow: hidden;
   cursor: pointer;
   ${(props) => props.theme.breakpoints.down('md')} {
@@ -65,7 +66,12 @@ export const SingleDesigner: React.FC<{ designer: Designer }> = ({
       <Box sx={{ pt: 2 }}>
         <Typography
           variant="body1"
-          sx={{ textAlign: 'center', fontWeight: 600, fontSize: '1.25rem' }}
+          sx={{
+            textAlign: 'center',
+            fontWeight: 600,
+            fontSize: '1.25rem',
+            textTransform: 'uppercase',
+          }}
         >
           {designer.name}
         </Typography>

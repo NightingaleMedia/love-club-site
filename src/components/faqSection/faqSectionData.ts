@@ -36,7 +36,7 @@ export const faqSectionData: Array<{ title: string; description: string }> = [
   {
     title: 'What should I bring to my appointment?',
     description:
-      "Aside from your lovely self, any undergarment you're considering wearing! Nude underwear/shapewear can help visualize. You won't be wearing a bra in your wedding day, so nipple covers, silicone stick on cups are perfect options! If you have your shoes, you are more than welcome to bring those! Having those will come in handy if the designer of your dress offers custom hem. If you don't have your shoes, no worries! Most of the appointment you will be getting in and out on the pedestal, so they aren't a necessity!",
+      "Aside from your lovely self, any undergarment you're considering wearing! Nude underwear/shapewear can help visualize. You won't be wearing a bra on your wedding day, so nipple covers, silicone stick on cups are perfect options! If you have your shoes, you are more than welcome to bring those! Having those will come in handy if the designer of your dress offers custom hem. If you don't have your shoes, no worries! Most of the appointment you will be getting in and out on the pedestal, so they aren't a necessity!",
   },
   {
     title: 'How many guests can I bring to my appointment?',

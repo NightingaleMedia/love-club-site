@@ -36,6 +36,7 @@ const BookNowButton = () => (
     color="secondary"
     variant="contained"
     size="large"
+    href="/book-now"
   >
     Book Now
   </Button>
@@ -120,7 +121,7 @@ const HomeHeroDesktop = () => {
           alt="a bride stands in front of an epic building"
           objectFit="scale-down"
           style={{
-            transform: 'translateY(-24%)',
+            transform: 'translateY(-15%)',
           }}
           // objectPosition={'top'}
           layout="fullWidth"
