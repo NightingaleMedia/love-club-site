@@ -1,3 +1,5 @@
+import { HELLO_EMAIL } from '../../constants'
+
 export const faqSectionData: Array<{ title: string; description: string }> = [
   {
     title: 'What sizes are available to try on?',
@@ -46,8 +48,7 @@ export const faqSectionData: Array<{ title: string; description: string }> = [
   {
     title:
       "What if there is a dress that I like from a designer that you carry, but you don't carry that particular gown?",
-    description:
-      "While we can't carry entire collections from each of our designers, we can sometimes have the ability to request particular samples to loan. Please email if you'd like to inquire about requesting a gown that we don't carry in the shop at brides@belovedbridal.com",
+    description: `While we can't carry entire collections from each of our designers, we can sometimes have the ability to request particular samples to loan. Please email if you'd like to inquire about requesting a gown that we don't carry in the shop at <a href="mailto:${HELLO_EMAIL}">${HELLO_EMAIL}</a>`,
   },
   {
     title: 'I said yes to my dress, what next?',

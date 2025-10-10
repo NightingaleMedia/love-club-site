@@ -1,6 +1,7 @@
 import { EmailOutlined, Phone, PhoneOutlined } from '@mui/icons-material'
 import { Box, Link, Typography, IconButton } from '@mui/material'
 import React from 'react'
+import { HELLO_EMAIL, PHONE_NUMBER } from '../../constants'
 export const ContactSection = () => {
   return (
     <Box sx={{ minHeight: '100vh', pb: 20 }}>
@@ -57,23 +58,27 @@ export const ContactSection = () => {
               </Typography>
             </Box>
             <Typography variant="body1" sx={{ mb: 1, fontSize: '1.5rem' }}>
-              <IconButton href="tel:(734) 222-3030">
+              <IconButton href={`tel:${PHONE_NUMBER}`}>
                 <PhoneOutlined />
               </IconButton>
-              <Link color="success" underline="hover" href="tel:(734) 222-3030">
-                (734) 222-3030
+              <Link
+                color="success"
+                underline="hover"
+                href={`tel:${PHONE_NUMBER}`}
+              >
+                {PHONE_NUMBER}
               </Link>
             </Typography>
             <Typography variant="body1" sx={{ mb: 1, fontSize: '1.5rem' }}>
-              <IconButton href="mailto:meg@theloveclubbridal.com">
+              <IconButton href={`mailto:${HELLO_EMAIL}`}>
                 <EmailOutlined />
               </IconButton>
               <Link
                 color="success"
                 underline="hover"
-                href="mailto:meg@theloveclubbridal.com"
+                href={`mailto:${HELLO_EMAIL}`}
               >
-                meg@loveclubbridal.com
+                {HELLO_EMAIL}
               </Link>
             </Typography>
           </Box>

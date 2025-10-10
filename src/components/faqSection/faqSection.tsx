@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Box, Button, Link, ThemeProvider } from '@mui/material'
 import { faqSectionData } from './faqSectionData'
+import { HELLO_EMAIL } from '../../constants'
 
 export default function FaqSection() {
   return (
@@ -31,9 +32,10 @@ export default function FaqSection() {
           Don't see your question here?
           <br /> Feel free to{' '}
           <Link
+            component={'a'}
             color="success"
             underline="hover"
-            href="mailto:meg@theloveclubbridal.com"
+            href={`mailto:${HELLO_EMAIL}`}
           >
             contact us!
           </Link>
@@ -63,9 +65,11 @@ export default function FaqSection() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="body1" sx={{ maxWidth: '768px' }}>
-                {m.description}
-              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ maxWidth: '768px' }}
+                dangerouslySetInnerHTML={{ __html: m.description }}
+              />
             </AccordionDetails>
           </Accordion>
         ))}
