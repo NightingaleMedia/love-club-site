@@ -2,8 +2,12 @@ import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `love-club-website`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `The Love Club Bridal`,
+    description: `The Love Club Bridal - Your dream wedding dress awaits`,
+    twitterUsername: `@theloveclubbridal`,
+    instagramUsername: `@theloveclubbridal`,
+    image: `/assets/img/hero1-metatag.png`,
+    siteUrl: `https://www.theloveclubbridal.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -37,6 +41,18 @@ const config: GatsbyConfig = {
           `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
         display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `The Love Club Bridal`,
+        short_name: `The Love Club`,
+        start_url: `/`,
+        background_color: `#eae5da`,
+        theme_color: `#ff8cc6`,
+        display: `standalone`,
+        icon: `src/assets/favicon.png`,
       },
     },
   ],
