@@ -61,7 +61,7 @@ const HomeHeroMobile = () => {
           alignItems: 'center',
           flexDirection: 'column',
           overflow: 'hidden',
-          zIndex: -1,
+          zIndex: 1,
         }}
       >
         <FindYourDressText />
