@@ -29,7 +29,7 @@ export const ContactSection = () => {
           style={{ maxWidth: '500px', border: 0 }}
           width="100%"
           height="500"
-          src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q=Beloved Bridal, Ann Arbor&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q=The Love Club Bridal, Ann Arbor&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         ></iframe>
 
         <Box
