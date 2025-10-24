@@ -1,6 +1,6 @@
 import '../styles/global.css'
 import * as React from 'react'
-import type { HeadFC, PageProps } from 'gatsby'
+import { Script, type HeadFC, type PageProps } from 'gatsby'
 import { Navbar } from '../components/navbar/navbar'
 import { HomeHero } from '../components/homeHero/homeHero'
 import { Box, Button, Divider } from '@mui/material'
@@ -38,6 +38,12 @@ const IndexPage: React.FC<PageProps> = () => {
           <ContactSection />
         </Box>
       </Box>
+      <Script
+        defer
+        src="https://connect.podium.com/widget.js#ORG_TOKEN=0ebad9df-9916-4f02-8d65-8a7b410d9767"
+        id="podium-widget"
+        data-organization-api-token="0ebad9df-9916-4f02-8d65-8a7b410d9767"
+      ></Script>
     </main>
   )
 }
