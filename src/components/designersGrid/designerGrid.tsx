@@ -32,8 +32,28 @@ export const DesignerGrid = () => {
         backgroundColor: theme.palette.background.default,
       })}
     >
-      <Box sx={{ display: 'flex', justifyContent: 'center', py: 8 }}>
-        <Typography variant="h3">Our Designers</Typography>
+      <Box sx={{ maxWidth: '600px', margin: 'auto', pb: 12 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Typography variant="h3">Our Designers</Typography>
+        </Box>
+
+        <Typography
+          variant="body1"
+          sx={{
+            maxWidth: '800px',
+            mt: 4,
+            fontSize: '1.2rem',
+            px: 4,
+            textAlign: 'left',
+          }}
+        >
+          Our designers are handpicked for their artistry and edge — gowns with
+          soul, texture, movement, and that{' '}
+          <span style={{ fontWeight: 'bold' }}> “THIS IS SO ME”</span> energy.
+          <br />
+          <br /> To see individual designer pricing, dresses, info and more,
+          select the designer below!
+        </Typography>
       </Box>
       <StyledWrapper>
         {designerData.map((designer: Designer) => (

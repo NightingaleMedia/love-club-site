@@ -3,6 +3,7 @@ import { styled } from '@mui/system'
 import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
 import { Designer } from './designerGridData'
+import { navigate } from 'gatsby'
 
 const StyledDesignerBox = styled(Box)`
   position: relative;
@@ -43,7 +44,11 @@ export const SingleDesigner: React.FC<{ designer: Designer }> = ({
   designer,
 }) => {
   return (
-    <StyledWrap>
+    <StyledWrap
+      onClick={() => {
+        navigate(`/designers/${designer.slug}`)
+      }}
+    >
       <StyledDesignerBox>
         <GatsbyImage
           image={getImage(designer.imageData)!}

@@ -8,6 +8,7 @@ export const useAllDesigners = () => {
           node {
             frontmatter {
               name
+              slug
               imageName {
                 name
                 childImageSharp {
@@ -27,6 +28,7 @@ export const useAllDesigners = () => {
       description: edge.node.frontmatter.description,
       imageName: 'test',
       imageData: edge.node.frontmatter.imageName,
+      slug: edge.node.frontmatter.slug,
     }
   })
 }
