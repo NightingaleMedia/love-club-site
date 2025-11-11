@@ -20,6 +20,36 @@ const config: GatsbyConfig = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-mdx`,
     {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: `http://127.0.0.1:1337`,
+        accessToken:
+          '272da957d1eb9f7d49fc1cb6888a742ff5748a539a574e6c3b9cbdf3ebee57cb8ae265f4692b7fd0967b229fb2efeb952f907502bbc14e65f9e84a03753947f0cff46169124ea1feef8cc9c1ac3ff3e87b0d1336dfb2a6163281ff21a7bd14237047d4cff01d7f12b99d6de62a17e02dd33e680b711f1649def77d32906784ed',
+        collectionTypes: [
+          {
+            singularName: 'about',
+          },
+          {
+            singularName: 'designer',
+            queryParams: {
+              populate: {
+                Looks: {
+                  populate: '*',
+                },
+                ImageDesktop: {
+                  populate: '*',
+                },
+                ImageMobile: {
+                  populate: '*',
+                },
+              },
+            },
+          },
+        ],
+        singleTypes: [],
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
@@ -53,6 +83,7 @@ const config: GatsbyConfig = {
         theme_color: `#ff8cc6`,
         display: `standalone`,
         icon: `src/assets/favicon.png`,
+        siteUrl: `https://www.theloveclubbridal.com`,
       },
     },
   ],

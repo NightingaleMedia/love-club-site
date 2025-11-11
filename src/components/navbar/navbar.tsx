@@ -4,10 +4,8 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
 import InputBase from '@mui/material/InputBase'
 import MenuIcon from '@mui/icons-material/Menu'
-import SearchIcon from '@mui/icons-material/Search'
 import navLogo from '../../assets/logos/nav-logo-1.svg'
 import {
   Button,
@@ -19,8 +17,10 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material'
-import { Inbox, Mail } from '@mui/icons-material'
 import { sections } from './sectionData'
+import { SocialIcons } from '../socialIcons/socialIcons'
+import { useAllDesigners } from '../../hooks/useAllDesigners'
+import { navigate } from 'gatsby'
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
@@ -54,11 +54,20 @@ export const Navbar = () => {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen)
   }
+  const designers = useAllDesigners()
   return (
     <AppBar position="sticky">
       <Toolbar disableGutters>
         <Box></Box>
-        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: 'flex',
+            alignItems: 'center',
+            cursor: 'pointer',
+          }}
+          onClick={() => navigate('/')}
+        >
           <img
             src={navLogo}
             style={{ maxHeight: '30px', width: 'auto', flexGrow: 1 }}
@@ -89,6 +98,7 @@ export const Navbar = () => {
             justifyContent: 'space-between',
             height: '100%',
             pb: 4,
+            px: 2,
           }}
           role="presentation"
         >
@@ -101,29 +111,33 @@ export const Navbar = () => {
               />
             </Box>
             <List>
-              {sections.map((section, index) => (
-                <Link
-                  href={section.id}
-                  onClick={toggleDrawer(false)}
-                  underline="none"
-                  color="inherit"
-                >
-                  <ListItem key={section.id} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon>{section.icon}</ListItemIcon>
-
-                      <ListItemText primary={section.label}></ListItemText>
-                    </ListItemButton>
-                  </ListItem>
-                </Link>
-              ))}
+              {sections.map((section, index) => {
+                return (
+                  <Link
+                    href={'/' + section.id}
+                    onClick={toggleDrawer(false)}
+                    underline="none"
+                    color="inherit"
+                  >
+                    <ListItem key={section.id} disablePadding>
+                      <ListItemButton>
+                        <ListItemIcon>{section.icon}</ListItemIcon>
+                        <ListItemText primary={section.label}></ListItemText>
+                      </ListItemButton>
+                    </ListItem>
+                  </Link>
+                )
+              })}
             </List>
           </Box>
+
           <Box
             sx={{
               width: '100%',
               display: 'flex',
               justifyContent: 'center',
+              flexDirection: 'column',
+              gap: 4,
             }}
           >
             <Button
@@ -134,6 +148,9 @@ export const Navbar = () => {
             >
               Book An Appointment
             </Button>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3 }}>
+              <SocialIcons />
+            </Box>
           </Box>
         </Box>
       </Drawer>

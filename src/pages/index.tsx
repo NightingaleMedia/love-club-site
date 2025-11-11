@@ -10,14 +10,22 @@ import { DesignerGrid } from '../components/designersGrid/designerGrid'
 import { BookNowButton } from '../components/bookNowButton/bookNowButton'
 import FaqSection from '../components/faqSection/faqSection'
 import { ContactSection } from '../components/contactSection/contactSection'
+import { MainWrap } from '../components/MainWrap'
+import { AboutUs } from '../components/aboutSection/aboutSection'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main style={{ maxWidth: '1920px', margin: 'auto' }}>
-      <Navbar />
+    <MainWrap>
       <HomeHero />
       <Box sx={{ backgroundColor: '#fff' }}>
         <BookNowButton />
+        <Box
+          component={'section'}
+          id="about-us"
+          sx={{ scrollMarginTop: '100px' }}
+        >
+          <AboutUs />
+        </Box>
         <Box
           component={'section'}
           id="designers"
@@ -29,7 +37,6 @@ const IndexPage: React.FC<PageProps> = () => {
         <Box component={'section'} id="faq" sx={{ scrollMarginTop: '100px' }}>
           <FaqSection />
         </Box>
-        <Divider />
         <Box
           component={'section'}
           id="contact"
@@ -38,13 +45,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <ContactSection />
         </Box>
       </Box>
-      <Script
-        defer
-        src="https://connect.podium.com/widget.js#ORG_TOKEN=0ebad9df-9916-4f02-8d65-8a7b410d9767"
-        id="podium-widget"
-        data-organization-api-token="0ebad9df-9916-4f02-8d65-8a7b410d9767"
-      ></Script>
-    </main>
+    </MainWrap>
   )
 }
 
