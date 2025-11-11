@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSiteMetadata } from '../../hooks/useSiteMetadata'
 
-export const SEO = ({ children }: { children: React.ReactNode }) => {
+export const SEO = ({ children }: { children?: React.ReactNode }) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -23,7 +23,7 @@ export const SEO = ({ children }: { children: React.ReactNode }) => {
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-      <meta name="og:image" content={seo.image} /> s
+      <meta name="og:image" content={seo.image} />
       <meta name="og:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:description" content={seo.description} />
