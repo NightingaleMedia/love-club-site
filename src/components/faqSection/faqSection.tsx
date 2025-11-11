@@ -27,7 +27,7 @@ export default function FaqSection() {
         <Typography
           variant="body1"
           component="div"
-          sx={{ textAlign: 'center' }}
+          sx={{ textAlign: 'center', fontSize: '1.2rem' }}
         >
           Don't see your question here?
           <br /> Feel free to{' '}
@@ -41,7 +41,7 @@ export default function FaqSection() {
           </Link>
         </Typography>
       </Box>
-      <Box sx={{ maxWidth: '768px', margin: 'auto' }}>
+      <Box sx={{ maxWidth: '600px', margin: 'auto' }}>
         {faqSectionData.map((m, index) => (
           <Accordion
             defaultExpanded={index === 0}

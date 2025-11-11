@@ -3,6 +3,7 @@ import React from 'react'
 import { Navbar } from './navbar/navbar'
 import { BookNowButton } from './bookNowButton/bookNowButton'
 import { Footer } from './footer/footer'
+import { SEO } from './seo/seo'
 export const MainWrap = ({
   children,
   fullWidthFooter = true,
@@ -11,6 +12,7 @@ export const MainWrap = ({
   fullWidthFooter?: boolean
 }) => (
   <main style={{ maxWidth: '1920px', margin: 'auto' }}>
+    <SEO />
     <Navbar />
     {children}
     <Footer fullWidth={fullWidthFooter} />

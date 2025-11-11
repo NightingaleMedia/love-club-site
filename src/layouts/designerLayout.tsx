@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { graphql, navigate, PageProps } from 'gatsby'
+import { graphql, HeadFC, navigate, PageProps } from 'gatsby'
 import { DesignerHero } from '../components/designerHero/designerHero'
 import { DesignerAbout } from '../components/designerAbout/designerAbout'
 import { DesignerFavoritesCarousel } from '../components/designerFavoritesCarousel/designerFavoritesCarousel'
@@ -138,3 +138,5 @@ export const pageQuery = graphql`
 `
 
 export default DesignerLayout
+
+export const Head: HeadFC = () => <title>The Love Club Bridal</title>
