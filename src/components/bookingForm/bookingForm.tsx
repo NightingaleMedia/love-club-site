@@ -12,9 +12,10 @@ export const BookingForm = () => {
       <iframe
         src="https://app.bridallive.com/bl-server/appointmentScheduler/1035ac0a.shtml?lang=en"
         width="100%"
-        style={{ minHeight: '100vh', border: 'none' }}
+        style={{ minHeight: '120vh', border: 'none' }}
         frameBorder="0"
         className="bl-iframe"
+        allow="payment https://app.bridallive.com allowpaymentrequest; cross-origin-isolated;"
       ></iframe>
     </StyledOverrideBox>
   )
