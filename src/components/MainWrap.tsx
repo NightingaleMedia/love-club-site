@@ -22,5 +22,17 @@ export const MainWrap = ({
       id="podium-widget"
       data-organization-api-token="0ebad9df-9916-4f02-8d65-8a7b410d9767"
     ></Script>
+    <Script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-J7J7CWG628"
+    ></Script>
+    <Script
+      dangerouslySetInnerHTML={{
+        __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J7J7CWG628');`,
+      }}
+    ></Script>
   </main>
 )
