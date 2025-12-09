@@ -1,10 +1,8 @@
 import '../styles/global.css'
 import * as React from 'react'
 import { Script, type HeadFC, type PageProps } from 'gatsby'
-import { Navbar } from '../components/navbar/navbar'
 import { HomeHero } from '../components/homeHero/homeHero'
 import { Box, Button, Divider } from '@mui/material'
-import { CalendarMonthOutlined } from '@mui/icons-material'
 import { DesignerGrid } from '../components/designersGrid/designerGrid'
 
 import { BookNowButton } from '../components/bookNowButton/bookNowButton'
