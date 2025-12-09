@@ -16,12 +16,7 @@ export const MainWrap = ({
     <Navbar />
     {children}
     <Footer fullWidth={fullWidthFooter} />
-    <Script
-      defer
-      src="https://connect.podium.com/widget.js#ORG_TOKEN=0ebad9df-9916-4f02-8d65-8a7b410d9767"
-      id="podium-widget"
-      data-organization-api-token="0ebad9df-9916-4f02-8d65-8a7b410d9767"
-    ></Script>
+
     <Script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-J7J7CWG628"
