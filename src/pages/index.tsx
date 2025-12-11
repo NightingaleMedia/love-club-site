@@ -10,6 +10,8 @@ import FaqSection from '../components/faqSection/faqSection'
 import { ContactSection } from '../components/contactSection/contactSection'
 import { MainWrap } from '../components/MainWrap'
 import { AboutUs } from '../components/aboutSection/aboutSection'
+import { SEO } from '../components/seo/seo'
+import { Scripts } from '../components/shared/scripts'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -49,4 +51,10 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>The Love Club Bridal</title>
+export const Head: HeadFC = () => (
+  <>
+    <title>The Love Club Bridal</title>
+    <SEO />
+    <Scripts />
+  </>
+)
