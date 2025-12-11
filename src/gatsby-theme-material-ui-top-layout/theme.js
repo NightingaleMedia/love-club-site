@@ -5,7 +5,7 @@ export const theme = createTheme({
     mode: 'light',
     background: {
       paper: '#eae5da',
-      default: 'rgba(210, 216, 216, 0.5)',
+      default: '#d2d8d880',
     },
     text: {
       primary: '#333333',
