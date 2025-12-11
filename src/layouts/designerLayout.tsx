@@ -11,6 +11,8 @@ import { Box, Button } from '@mui/material'
 import { BookNowButton } from '../components/bookNowButton/bookNowButton'
 import { theme } from '../theme'
 import { ArrowLeft, ChevronLeft } from '@mui/icons-material'
+import { SEO } from '../components/seo/seo'
+import { Scripts } from '../components/shared/scripts'
 
 interface DesignerLayoutProps {}
 
@@ -139,4 +141,10 @@ export const pageQuery = graphql`
 
 export default DesignerLayout
 
-export const Head: HeadFC = () => <title>The Love Club Bridal</title>
+export const Head: HeadFC = () => (
+  <>
+    <title>Book Now | The Love Club Bridal</title>
+    <SEO />
+    <Scripts />
+  </>
+)
